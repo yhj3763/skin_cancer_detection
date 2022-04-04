@@ -24,7 +24,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBDXstz3QySwQXMv4TunGYnrP9qkbXCX3M" />
+            android:value="Put your API" />
 
         <activity
             android:name=".Hospital"
