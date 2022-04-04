@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">skin_cancer_detection</string>
+    <string name="Test">Test</string>
+    <string name="about">About</string>
+    <string name="title_activity_googlemaps">Googlemaps_Activity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_information_detail_host">InformationActivityDetailHostActivity
+    </string>
+    <string name="title_informationactivity_list">Items</string>
+    <string name="title_informationactivity_detail">InformationActivity Detail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_hospital">Hospital</string>
+</resources>

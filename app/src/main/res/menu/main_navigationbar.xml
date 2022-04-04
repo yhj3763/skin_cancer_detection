@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"
+            />
+        <item
+            android:id="@+id/hospital"
+            android:icon="@drawable/ic_hospital"
+            android:title="Hospital"
+            />
+
+        <item
+            android:id="@+id/bug_report"
+            android:icon="@drawable/ic_report"
+            android:title="Report"
+            />
+
+
+    </group>
+
+    <item android:title="SkinCancer Information">
+        <menu>
+            <item android:id="@+id/definition"
+                android:icon="@drawable/ic_star"
+                android:title="What is SkinCancer?"/>
+            <item android:id="@+id/types"
+                android:icon="@drawable/ic_star"
+                android:title="Types of SkinCancer"/>
+            <item android:id="@+id/Symptom"
+                android:icon="@drawable/ic_star"
+                android:title="Symptom of SkinCancer"/>
+
+        </menu>
+    </item>
+
+
+</menu>

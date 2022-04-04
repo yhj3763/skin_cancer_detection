@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/drawable/button_border.xml" value="0.1605" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_hospital.xml" value="0.17401215805471124" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_informationactivity_detail.xml" value="0.3619791666666667" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_map.xml" value="0.19927536231884058" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_home.xml" value="0.11119554204660588" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_hospital.xml" value="0.3177083333333333" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_informationactivity_detail.xml" value="0.3619791666666667" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/navigation_header.xml" value="0.1" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/menu/drawer_menu.xml" value="0.1234375" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/menu/main_navigationbar.xml" value="0.29322916666666665" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/menu/mainmenu.xml" value="0.29322916666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
