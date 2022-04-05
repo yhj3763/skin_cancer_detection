@@ -127,18 +127,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         try {
             var inputStream = contentResolver.openInputStream(fileUri)
 
-            //inJustDecodeBounds 값을 true 로 설정한 상태에서 decodeXXX() 를 호출.
-            //로딩 하고자 하는 이미지의 각종 정보가 options 에 설정 된다.
+
             BitmapFactory.decodeStream(inputStream, null, options)
             inputStream!!.close()
             inputStream = null
         } catch (e: Exception) {
             e.printStackTrace()
         }
-        //비율 계산........................
+   
         val (height: Int, width: Int) = options.run { outHeight to outWidth }
         var inSampleSize = 1
-        //inSampleSize 비율 계산
+
         if (height > reqHeight || width > reqWidth) {
 
             val halfHeight: Int = height / 2
@@ -169,14 +168,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)		//작성한 메뉴파일 설정
+        menuInflater.inflate(R.menu.main_menu, menu)		
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // 클릭된 메뉴 아이템의 아이디 마다 when 구절로 클릭시 동작을 설정한다.
+
         when(item!!.itemId){
-            android.R.id.home->{ // 메뉴 버튼
+            android.R.id.home->{ 
                 drawerLayout.openDrawer(GravityCompat.START)
             }
             R.id.menu_about-> Snackbar.make(toolbar,"About menu pressed",Snackbar.LENGTH_SHORT).show()
@@ -188,11 +187,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){  // 네비게이션 메뉴가 클릭되면 스낵바가 나타난다.
+        when(item.itemId){  
 
             R.id.hospital-> startActivity(Intent(this@MainActivity,Hospital::class.java))       }
 
-        drawerLayout.closeDrawers() // 기능을 수행하고 네비게이션을 닫아준다.
+        drawerLayout.closeDrawers() 
         return false
     }
 
