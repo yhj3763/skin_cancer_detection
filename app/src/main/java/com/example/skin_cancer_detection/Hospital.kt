@@ -72,14 +72,14 @@ class Hospital : AppCompatActivity(), OnMapReadyCallback, NavigationView.OnNavig
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)		//작성한 메뉴파일 설정
+        menuInflater.inflate(R.menu.main_menu, menu)	
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // 클릭된 메뉴 아이템의 아이디 마다 when 구절로 클릭시 동작을 설정한다.
+       
         when(item!!.itemId){
-            android.R.id.home->{ // 메뉴 버튼
+            android.R.id.home->{ 
                 drawerLayout.openDrawer(GravityCompat.START)
             }
             R.id.menu_about-> Snackbar.make(toolbar,"About menu pressed", Snackbar.LENGTH_SHORT).show()
@@ -91,11 +91,11 @@ class Hospital : AppCompatActivity(), OnMapReadyCallback, NavigationView.OnNavig
 
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){  // 네비게이션 메뉴가 클릭되면 스낵바가 나타난다.
+        when(item.itemId){  
 
             R.id.home-> startActivity(Intent(this@Hospital,MainActivity::class.java))       }
 
-        drawerLayout.closeDrawers() // 기능을 수행하고 네비게이션을 닫아준다.
+        drawerLayout.closeDrawers() 
         return false
     }
 
