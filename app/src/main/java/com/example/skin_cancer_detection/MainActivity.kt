@@ -14,16 +14,9 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.core.view.GravityCompat;
 import com.google.android.material.navigation.NavigationView;
-import com.example.skin_cancer_detection.databinding.ActivityMainBinding
-import android.os.Environment
-import android.provider.MediaStore
-import android.util.Log
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
-import java.io.File
-import java.util.*
-import java.text.SimpleDateFormat
+
+
 
 
 
@@ -31,89 +24,13 @@ import java.text.SimpleDateFormat
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
-    private var isNavigationOpen = false
-    lateinit var binding:ActivityMainBinding
-    lateinit var filePath: String
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        var requestGalleryLauncher=registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult())
-        {
-            try{
-                val calRatio = calculateInSampleSize(
-                    it.data!!.data!!,
-                    resources.getDimensionPixelSize(R.dimen.imgSize),
-                    resources.getDimensionPixelSize(R.dimen.imgSize)
-                )
-                val option = BitmapFactory.Options()
-                option.inSampleSize=calRatio
-
-                var inputStream = contentResolver.openInputStream(it.data!!.data!!)
-                val bitmap = BitmapFactory.decodeStream(inputStream,null,option)
-                inputStream!!.close()
-                inputStream=null
-
-                bitmap?.let{
-                    binding.imageView2.setImageBitmap(bitmap)
-                }?: let{
-                    Log.d("kkang","bitmap null")
-                }
-            }catch (e: Exception){
-                e.printStackTrace()
-            }
-        }
-
-        binding.Gallerybutton2.setOnClickListener{
-
-            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-            intent.type="image/*"
-            requestGalleryLauncher.launch(intent)
-        }
-
-        val requestCameraFileLauncher = registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult()) {
-            val calRatio = calculateInSampleSize(
-                Uri.fromFile(File(filePath)),
-                resources.getDimensionPixelSize(R.dimen.imgSize),
-                resources.getDimensionPixelSize(R.dimen.imgSize)
-            )
-
-            val option = BitmapFactory.Options()
-            option.inSampleSize = calRatio
-            val bitmap = BitmapFactory.decodeFile(filePath, option)
-            bitmap?.let {
-                binding.imageView2.setImageBitmap(bitmap)
-            }
-        }
-
-        binding.Camerabutton.setOnClickListener{
-
-            val timeStamp: String =
-                SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-            val storageDir: File?= getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-            val file=File.createTempFile(
-                "JPEG_${timeStamp}_",
-                ".jpg",
-                storageDir
-            )
-            filePath=file.absolutePath
-            val photoURI: Uri= FileProvider.getUriForFile(
-                this,
-                "com.example.skin_cancer_detection.fileprovider", file
-            )
-            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-            requestCameraFileLauncher.launch(intent)
-
-        }
+        supportFragmentManager.beginTransaction()
+            .add(R.id.host,HomeFragment(),"HOME")
+            .commit()
 
         setToolbar()
 
@@ -121,40 +38,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
-    private fun calculateInSampleSize(fileUri: Uri, reqWidth: Int, reqHeight: Int): Int {
-        val options = BitmapFactory.Options()
-        options.inJustDecodeBounds = true
-        try {
-            var inputStream = contentResolver.openInputStream(fileUri)
 
 
-            BitmapFactory.decodeStream(inputStream, null, options)
-            inputStream!!.close()
-            inputStream = null
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-   
-        val (height: Int, width: Int) = options.run { outHeight to outWidth }
-        var inSampleSize = 1
-
-        if (height > reqHeight || width > reqWidth) {
-
-            val halfHeight: Int = height / 2
-            val halfWidth: Int = width / 2
-
-            while (halfHeight / inSampleSize >= reqHeight && halfWidth / inSampleSize >= reqWidth) {
-                inSampleSize *= 2
-            }
-        }
-        return inSampleSize
-    }
-
-
-
-
-
-    private fun setToolbar(){
+    private fun setToolbar() {
         setSupportActionBar(toolbar)
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
@@ -162,36 +48,40 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         supportActionBar!!.setDisplayShowTitleEnabled(false)
 
 
-
-
     }
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)		
+        menuInflater.inflate(R.menu.main_menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when(item!!.itemId){
-            android.R.id.home->{ 
+        when (item!!.itemId) {
+            android.R.id.home -> {
                 drawerLayout.openDrawer(GravityCompat.START)
             }
-            R.id.menu_about-> Snackbar.make(toolbar,"About menu pressed",Snackbar.LENGTH_SHORT).show()
+            R.id.menu_about -> startActivity(Intent(this@MainActivity,AboutActivity::class.java))
 
         }
         return super.onOptionsItemSelected(item)
     }
 
 
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){  
+        when (item.itemId) {  // 네비게이션 메뉴가 클릭되면 스낵바가 나타난다.
 
-            R.id.hospital-> startActivity(Intent(this@MainActivity,Hospital::class.java))       }
+            R.id.detection -> replaceFragment(DetectionFragment())
+            R.id.definition-> replaceFragment(InformationFragment1())
+            R.id.types->replaceFragment(InformationFragment2())
+            R.id.cause->replaceFragment(InformationFragment3())
+            R.id.prevention->replaceFragment(InformationFragment4())
+            R.id.hospital ->  startActivity(Intent(this@MainActivity,MapsActivity::class.java))
+            R.id.report -> startActivity(Intent(this@MainActivity,ReportActivity::class.java))
 
-        drawerLayout.closeDrawers() 
+        }
+
+        drawerLayout.closeDrawers() // 기능을 수행하고 네비게이션을 닫아준다.
         return false
     }
 
@@ -205,14 +95,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.host,fragment)
+            .commit()
 
-
-
-
-
-
-
-
+    }
 
 
 }

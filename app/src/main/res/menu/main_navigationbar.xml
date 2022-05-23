@@ -8,16 +8,23 @@
             android:title="Home"
             />
         <item
+            android:id="@+id/detection"
+            android:icon="@drawable/ic_baseline_add_a_photo_24"
+            android:title="Detection"
+            />
+
+        <item
             android:id="@+id/hospital"
             android:icon="@drawable/ic_hospital"
             android:title="Hospital"
             />
 
         <item
-            android:id="@+id/bug_report"
+            android:id="@+id/report"
             android:icon="@drawable/ic_report"
             android:title="Report"
             />
+
 
 
     </group>
@@ -30,9 +37,13 @@
             <item android:id="@+id/types"
                 android:icon="@drawable/ic_star"
                 android:title="Types of SkinCancer"/>
-            <item android:id="@+id/Symptom"
+            <item android:id="@+id/cause"
                 android:icon="@drawable/ic_star"
-                android:title="Symptom of SkinCancer"/>
+                android:title="Cause of SkinCancer"/>
+            <item android:id="@+id/prevention"
+                android:icon="@drawable/ic_star"
+                android:title="Prevention of SkinCancer"/>
+
 
         </menu>
     </item>

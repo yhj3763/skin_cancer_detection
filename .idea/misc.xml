@@ -4,16 +4,30 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/skin_cancer_detection/app/src/main/res/drawable/button_border.xml" value="0.1605" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/drawable/transparent_bordered_button.xml" value="0.1465" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout-sw600dp/fragment_home.xml" value="0.26366120218579236" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_detection.xml" value="0.29791666666666666" />
         <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_hospital.xml" value="0.17401215805471124" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_information4.xml" value="0.30885416666666665" />
         <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_informationactivity_detail.xml" value="0.3619791666666667" />
-        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_main.xml" value="0.29082426127527217" />
         <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_map.xml" value="0.19927536231884058" />
-        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_home.xml" value="0.11119554204660588" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_report.xml" value="0.19479166666666667" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/activity_splash.xml" value="0.36096014492753625" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_about.xml" value="0.20018115942028986" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_camera.xml" value="0.17681159420289855" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_detection.xml" value="0.25317028985507245" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_hospital.xml" value="0.3177083333333333" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_info1.xml" value="0.29739583333333336" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_info2.xml" value="0.25" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_info3.xml" value="0.2" />
         <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/fragment_informationactivity_detail.xml" value="0.3619791666666667" />
-        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/navigation_header.xml" value="0.1" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/navigation_header.xml" value="0.22" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/layout/result.xml" value="0.1" />
         <entry key="..\:/skin_cancer_detection/app/src/main/res/menu/drawer_menu.xml" value="0.1234375" />
-        <entry key="..\:/skin_cancer_detection/app/src/main/res/menu/main_navigationbar.xml" value="0.29322916666666665" />
+        <entry key="..\:/skin_cancer_detection/app/src/main/res/menu/main_navigationbar.xml" value="0.1" />
         <entry key="..\:/skin_cancer_detection/app/src/main/res/menu/mainmenu.xml" value="0.29322916666666665" />
       </map>
     </option>
