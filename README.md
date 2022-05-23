@@ -1,6 +1,8 @@
 # skin_cancer_detection  ----- I am working on it.
 This repository is for the project for skin_cancer_detection at csusb.
 
+Although there is map function for hospital, picture is not included here.
+
 
 ![10](https://user-images.githubusercontent.com/65998859/169724843-e2dce724-467b-4422-adcf-4f4e54d0c634.png)
 Icon
@@ -51,5 +53,5 @@ Information 2
 Information 3
 
 
-![17](https://user-images.githubusercontent.com/65998859/169724812-325b52c8-ff1d-4d32-8c5f-f82eee7cfa14.png)
+![13](https://user-images.githubusercontent.com/65998859/169725012-1f8fc97d-d4bc-4139-9e49-bb15a98fd3c7.png)
 Information 4
