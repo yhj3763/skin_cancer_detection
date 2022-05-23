@@ -2,11 +2,54 @@
 This repository is for the project for skin_cancer_detection at csusb.
 
 
+![10](https://user-images.githubusercontent.com/65998859/169724843-e2dce724-467b-4422-adcf-4f4e54d0c634.png)
+Icon
 
 
-![1](https://user-images.githubusercontent.com/65998859/161650175-aab14005-58c8-4d72-8a5d-672bb7db8d5a.png)
-![2](https://user-images.githubusercontent.com/65998859/161650177-fcde96bc-5f7e-402d-8a0c-f3c0d744adf0.png)
-![3](https://user-images.githubusercontent.com/65998859/161650170-c032f6b7-0f83-437d-afd5-b13ccace113f.png)
-![4](https://user-images.githubusercontent.com/65998859/161650173-3dc57230-f054-48ab-ac46-24ddc53142df.png)
-![5](https://user-images.githubusercontent.com/65998859/161650174-4be09301-30d5-48ed-b8b2-097390306919.png)
+![11](https://user-images.githubusercontent.com/65998859/169724832-d2e1bad1-e19e-4acb-a155-057c2927d877.png)
+Splash Screen
 
+
+![1](https://user-images.githubusercontent.com/65998859/169724658-cfb56de1-fdab-42cd-b9ec-8ffc1809750a.png)
+Main
+
+
+
+![2](https://user-images.githubusercontent.com/65998859/169724672-83911f40-269a-46e2-b83a-4a00b612437c.png)
+Menu
+
+
+![12](https://user-images.githubusercontent.com/65998859/169724859-58a6f6ff-1355-4b6d-b5dc-0b233d3cc763.png)
+Selection page between camera and gallery
+
+
+![4](https://user-images.githubusercontent.com/65998859/169724694-73cbca20-1787-49c1-84a8-aa3ad0b8258f.png)
+Detection through camera
+
+
+![5](https://user-images.githubusercontent.com/65998859/169724722-70bf04db-ea47-482e-952b-afcda79b786d.png)
+Detection through gallery
+
+
+![6](https://user-images.githubusercontent.com/65998859/169724732-0b766d3a-f7ef-4aa4-b810-d6eb6ca98254.png)
+Detection through gallery2
+
+
+![8](https://user-images.githubusercontent.com/65998859/169724743-32cd72e9-9adc-47b8-914c-4e4065e828f7.png)
+Report
+
+
+![9](https://user-images.githubusercontent.com/65998859/169724752-7addd53f-b19e-4c89-9c5b-f34c28ca78cd.png)
+Information 1
+
+
+![14](https://user-images.githubusercontent.com/65998859/169724782-a6e79da1-e1ff-4cbb-bb2a-e2ef47dc5e2c.png)
+Information 2
+
+
+![16](https://user-images.githubusercontent.com/65998859/169724794-2a82df3a-0feb-4257-9cc0-0a58550f82ea.png)
+Information 3
+
+
+![17](https://user-images.githubusercontent.com/65998859/169724812-325b52c8-ff1d-4d32-8c5f-f82eee7cfa14.png)
+Information 4
